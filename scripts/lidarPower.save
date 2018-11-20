@@ -1,0 +1,13 @@
+#!/bin/bash          
+#
+# Script to delay the launch of a roslaunch file
+# 
+# Koen Lekkerkerker
+# Thu 24 Apr 2014 
+#
+# Use: ./timed_roslaunch.sh [number of seconds to delay] [rospkg] [roslaunch file]
+#
+
+gpio mode 7 out
+if [ "$1" = "1" ]; then
+    echo "start wait for $1 seconds"

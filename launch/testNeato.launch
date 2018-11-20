@@ -2,5 +2,6 @@
 	<arg name="port" default="/dev/ttyS0" />
 	<node pkg="xv_11_laser_driver" type="neato_laser_publisher" name="neato_laser_node" args="_port:=$(arg port)"/>
 	<node pkg="tf" type="static_transform_publisher" name="tf_neato" args="0 0 0 0 0 0 1 map neato_laser 10" />
+        <node pkg="testBot_drivers" type="lidarPower.sh" args="1" name="turnOnLidar" />
 		
 </launch>
